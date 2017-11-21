@@ -1,0 +1,63 @@
+html, body{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: content-box;
+}
+header {
+  /* position: absolute; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 48px;
+  left: 40px;
+  top: 26px;  
+}
+
+header ul {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+
+header ul li {
+  display: inline-block;
+}
+
+header button {
+  border-radius: 12px;
+}
+
+.hero {
+  height: 300px;
+  padding-top: 50px;
+  background-color: #EFEFEF;
+}
+.hero * {
+  text-align: center;
+  display: block;
+  margin: auto;
+}
+.hero h1 {
+  padding: 50px;
+}
+
+.about-arinka {
+  margin: auto;
+  width: 70%;
+}
+
+.about-arinka * {
+  text-align: center;
+}
+
+.on-the-blog {
+  width: 100%;
+  height: 250px;
+  padding: 0px 100px;
+}
+
+footer {
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+}
