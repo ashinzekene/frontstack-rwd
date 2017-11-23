@@ -23,7 +23,11 @@
   src: url(../fonts/Catamaran/Catamaran-Bold.ttf);
 }
 * {
-  box-sizing: border-box
+  box-sizing: border-box;
+  font-family: "Catamaran";
+}
+:focus {
+  outline: 0px;
 }
 html, body{
   width: 100%;
@@ -49,13 +53,26 @@ header {
 
 header ul {
   margin: 0px;
-  padding: 0px;
+  padding-left: 50px;
   list-style-type: none;
 }
 
 header ul li {
   display: inline-block;
   padding: 12px;
+  transition: 1000ms all;
+  cursor: pointer;
+}
+header ul li:after {
+  content: "";
+  height: 100%;
+  border-bottom: 3px solid #FAFAFA;
+  transition: 1000ms all;
+  width: 0%;
+}
+
+header ul:hover li:after {
+  width: 100%;
 }
 
 header button {
@@ -87,17 +104,20 @@ header button {
   margin: auto;
   font-weight: 900;
 }
-
+.hero .search {
+  position: absolute;
+  bottom: -40px;
+  left: 30%;
+  width: 40%;
+}
 .hero .search label {
   font-size: 1.2rem;
 }
 .hero .search #search-box {
-  position: absolute;
-  bottom: -40px;
   height: 80px;
-  font-size: 1rem;
-  width: 40%;
-  left: 30%;
+  font-size: 1.2rem;
+  width: 100%;
+  margin-top:20px;
   border: 3px solid #F2994A;
   border-radius: 40px;
   padding: 20px;
@@ -112,43 +132,115 @@ header button {
   
 .about-arinka {
   margin: auto;
-  width: 70%;
+  margin-top: 180px;
+  width: 65%;
+  font-weight: 600;
 }
 
 .about-arinka * {
   text-align: center;
+  font-size: 1.47rem;
+}
+
+.about-arinka h3 {
+  font-family: Catamaran;
+  font-weight: 900;
+  font-size: 1.2rem;
+  letter-spacing: 0.2rem;
+  color: #C3C0C0;
+  padding-bottom: 50px;
+}
+
+.locations {
+  width: 80%;
+  margin: auto;
+  padding: 100px 0px;
+  display: flex;
+  justify-content: space-around;
+}
+.popular-locations .location {
+  height: 400px;
+  width: 28%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #EFEFEF;
+  border-radius: 5px;
+}
+
+.popular-locations .location .wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-end;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  background-color: rgba(0,0,0,0.45);
+  padding: 20px;
+  height: 100%;
+  width: 100%;
+}
+.popular-locations .location h3 {
+  text-align: left;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #FFFFFF;
+}
+.popular-locations .location p {
+  text-align: left;
+  font-size: 1.1rem;
+  color: #D78E52;
+}
+.popular-locations .location#bauchi {
+  background-image: url("../images/bauchi.jpg")
+}
+.popular-locations .location#jos {
+  background-image: url("../images/jos.jpg")
+}
+.popular-locations .location#abuja {
+  background-image: url("../images/abuja.jpg")
+}
+
+.popular-locations .clear-button {
+  margin: auto;
+  display: block;
+  padding: 15px 40px;
+  letter-spacing: 0.15rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  background-color: transparent;
+  border: 2px solid #E36F55;
+  color: #E36F55;
+  cursor: pointer;
+  margin-bottom: 90px;
+  border-radius: 30px; 
 }
 
 .on-the-blog {
   position: relative;
-  height: 250px;
-  background-color: #FAFAFA;
+  height: 450px;
+  background: url("../images/on-the-blog.jpg");
+  background-position: center;
+  background-size: cover;
 }
 .on-the-blog .absolute {
   position: absolute;
-  top: 0;
-  left: 60px;
-  height: 100%;
-  width: 30%;
-}
-
-.locations {
-  padding: 0px 50px;
   display: flex;
-  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  top: 0;
+  padding-left: 150px;
+  height: 100%;
+  width: 45%;
+  background: linear-gradient(#E36E55, #D78F52);
 }
-.popular-locations {
-  padding: 50px 60px;
+.on-the-blog .absolute h5 {
+  color: #FEBE61;
 }
-.popular-locations .clear-button {
-  justify-self: center;
-}
-.popular-locations .location {
-  height: 200px;
-  padding: 20px;
-  width: 28%;
-  background-color: #EFEFEF;
-  border-radius: 15px;
+.on-the-blog .absolute h1 {
+  font-size: 4rem;
+  line-height: 60px;
+  color: #FAFAFA;
 }
 
 footer {
