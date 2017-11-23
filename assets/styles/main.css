@@ -1,16 +1,50 @@
+@font-face {
+  font-family: "Catamaran";
+  src: url(../fonts/Catamaran/Catamaran-Medium.ttf);
+}
+@font-face {
+  font-family: "Catamaran";
+  font-weight: 100;
+  src: url(../fonts/Catamaran/Catamaran-ExtraLight.ttf);
+}
+@font-face {
+  font-family: "Catamaran";
+  font-weight: 200;
+  src: url(../fonts/Catamaran/Catamaran-Light.ttf);
+}
+@font-face {
+  font-family: "Catamaran";
+  font-weight: 600;
+  src: url(../fonts/Catamaran/Catamaran-SemiBold.ttf);
+}
+@font-face {
+  font-family: "Catamaran";
+  font-weight: 900;
+  src: url(../fonts/Catamaran/Catamaran-Bold.ttf);
+}
+* {
+  box-sizing: border-box
+}
 html, body{
+  width: 100%;
+  font-family: "Catamaran";
+  font-size: 16px;
   margin: 0px;
   padding: 0px;
   box-sizing: content-box;
 }
 header {
-  /* position: absolute; */
+  position: absolute;
+  background: transparent;
+  color: #fafafa;
+  width: 100%;
+  z-index: 100;
+  padding: 0 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 48px;
-  left: 40px;
-  top: 26px;  
+  top: 26px;
 }
 
 header ul {
@@ -21,26 +55,61 @@ header ul {
 
 header ul li {
   display: inline-block;
+  padding: 12px;
 }
 
 header button {
-  border-radius: 12px;
+  border-radius: 25px;
+  padding: 15px 30px;
+  border: none;
+  color: #FAFAFA;
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .hero {
-  height: 300px;
-  padding-top: 50px;
-  background-color: #EFEFEF;
+  height: 500px;
+  padding-top: 150px;
+  position: relative;
+  background: linear-gradient(180deg, #EB5757 0%, #D59152 100%);
 }
 .hero * {
   text-align: center;
   display: block;
   margin: auto;
+  color: #FAFAFA;
 }
 .hero h1 {
   padding: 50px;
+  padding: 40px 0px;
+  font-size: 3.3rem;
+  line-height: 60px;
+  width: 50%;
+  margin: auto;
+  font-weight: 900;
 }
 
+.hero .search label {
+  font-size: 1.2rem;
+}
+.hero .search #search-box {
+  position: absolute;
+  bottom: -40px;
+  height: 80px;
+  font-size: 1rem;
+  width: 40%;
+  left: 30%;
+  border: 3px solid #F2994A;
+  border-radius: 40px;
+  padding: 20px;
+  color: #C3C0C0;
+}
+.hero .search #search-box::-moz-placeholder {
+  color: #C3C0C0;
+}
+.hero .search #search-box::-webkit-input-placeholder {
+  color: #C3C0C0;
+}
+  
 .about-arinka {
   margin: auto;
   width: 70%;
@@ -51,9 +120,35 @@ header button {
 }
 
 .on-the-blog {
-  width: 100%;
+  position: relative;
   height: 250px;
-  padding: 0px 100px;
+  background-color: #FAFAFA;
+}
+.on-the-blog .absolute {
+  position: absolute;
+  top: 0;
+  left: 60px;
+  height: 100%;
+  width: 30%;
+}
+
+.locations {
+  padding: 0px 50px;
+  display: flex;
+  justify-content: space-around;
+}
+.popular-locations {
+  padding: 50px 60px;
+}
+.popular-locations .clear-button {
+  justify-self: center;
+}
+.popular-locations .location {
+  height: 200px;
+  padding: 20px;
+  width: 28%;
+  background-color: #EFEFEF;
+  border-radius: 15px;
 }
 
 footer {

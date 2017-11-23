@@ -5,11 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>FrontStack Responsive Design Hackathon</title>
+  <link rel="stylesheet" href="assets/styles/reset.css">
   <link rel="stylesheet" href="assets/styles/main.css">
 </head>
 <body>
+  
   <header>
-    <h1>ARINKA</h1>
+    <h5>ARINKA</h5>
     <nav>
       <ul>
         <li>LOCATIONS</li>
@@ -17,14 +19,13 @@
         <li>BLOGS</li>
       </ul>
     </nav>
-    <button>LOGIN/SIGNUP</button>
+    <button>LOGIN / SIGNUP</button>
   </header>
-  
   <div class="hero">
     <h1>Discover the best places to travel to in Nigeria</h1>
     <div class="search">
-      <label for="search">What type of adventure are you looking for?</label>
-      <input type="search" id="search" name="search">
+      <label for="search-box">What type of adventure are you looking for?</label>
+      <input type="search" id="search-box" placeholder="e.g educational, outdoors, relaxed" name="search">
     </div>
   </div>
 
@@ -38,25 +39,30 @@
   </div>
 
   <div class="popular-locations">
-    <div class="location">
-      <h3>Bauchi Park</h3>
-      <p>Relaxed holiday for two</p>
-    </div>
-    <div class="location">
-      <h3>Jos, Plateau</h3>
-      <p>Experience Nigeria in the 60s</p>
-    </div>
-    <div class="location">
-      <h3>Abuja Car racing</h3>
-      <p>Get your adrenaline pumping</p>
+
+    <div class="locations">
+      <div class="location">
+        <h3>Bauchi Park</h3>
+        <p>Relaxed holiday for two</p>
+      </div>
+      <div class="location">
+        <h3>Jos, Plateau</h3>
+        <p>Experience Nigeria in the 60s</p>
+      </div>
+      <div class="location">
+        <h3>Abuja Car racing</h3>
+        <p>Get your adrenaline pumping</p>
+      </div>
     </div>
 
     <button class="clear-button">SEE MORE</button>
   </div>
 
   <div class="on-the-blog">
-    <h5>ON THE BLOG</h5>
-    <h1>Hanging out in Borno</h1>
+    <div class="absolute">
+      <h5>ON THE BLOG</h5>
+      <h1>Hanging out in Borno</h1>
+    </div>
   </div>
 
   <footer>
@@ -64,6 +70,6 @@
     <p class="copyright">Copyright Frontstack 2017</p>
   </footer>
   
-  <script src="assets/script/main.js"></script>
+  <!-- <script src="assets/script/main.js"></script> -->
 </body>
 </html>
