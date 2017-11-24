@@ -159,6 +159,8 @@ header button {
 .popular-locations .location {
   height: 350px;
   width: 28%;
+  border-radius: 3px;
+  overflow: hidden;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -336,7 +338,7 @@ footer {
   }
   .locations .location {
     width: 90%;
-    margin: 10px;
+    margin: 30px 10px;
   }
 }
 
@@ -350,5 +352,8 @@ footer {
   }
   .locations {
     width: 90%;
+  }
+  .locations .location {
+    margin: 10px 40px;
   }
 }
