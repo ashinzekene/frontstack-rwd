@@ -26,8 +26,11 @@
   box-sizing: border-box;
   font-family: "Catamaran";
 }
-:focus {
+/* :focus {
   outline: 0px;
+} */
+button {
+  cursor: pointer;
 }
 html, body{
   width: 100%;
@@ -67,22 +70,34 @@ header ul {
 }
 
 header ul li {
-  display: inline-block;
-  padding: 12px;
-  transition: 1000ms all;
-  cursor: pointer;
+display: inline-block;
+padding: 12px;
+transition: 1000ms all;
+cursor: pointer;
+}
+
+header ul li::after {
+  content: "";
+  display: block;
+  width: 0px;
+  transition: 300ms all;
+  margin-top: 3px;
+  border-bottom: 3px solid #fafafa
+}
+header ul li:hover::after {
+  width: 100%
 }
 
 header button {
   border-radius: 25px;
-  padding: 15px 30px;
+  padding: 10px 35px;
   border: none;
   color: #FAFAFA;
   background: rgba(255, 255, 255, 0.2);
 }
 
 .hero {
-  height: 500px;
+  height: 540px;
   padding-top: 150px;
   position: relative;
   background: linear-gradient(180deg, #EB5757 0%, #D59152 100%);
@@ -96,8 +111,8 @@ header button {
 .hero h1 {
   padding: 50px;
   padding: 40px 0px;
-  font-size: 3.3rem;
-  line-height: 60px;
+  font-size: 4rem;
+  line-height: 65px;
   width: 55%;
   margin: auto;
   font-weight: 900;
@@ -110,6 +125,8 @@ header button {
 }
 .hero .search label {
   font-size: 1.2rem;
+  padding-left : 15px; 
+  padding-right : 15px; 
 }
 .hero .search #search-box {
   height: 80px;
@@ -192,19 +209,19 @@ header button {
   color: #D78E52;
 }
 .popular-locations .location#bauchi {
-  background-image: url("../images/bauchi.jpg")
+  background-image: url("http://res.cloudinary.com/ashinzekene/image/upload/v1511573968/frontstack/bauchi.jpg")
 }
 .popular-locations .location#jos {
-  background-image: url("../images/jos.jpg")
+  background-image: url("http://res.cloudinary.com/ashinzekene/image/upload/v1511573978/frontstack/jos.jpg")
 }
 .popular-locations .location#abuja {
-  background-image: url("../images/abuja.jpg")
+  background-image: url("http://res.cloudinary.com/ashinzekene/image/upload/v1511573958/frontstack/abuja.jpg")
 }
 
 .popular-locations .clear-button {
   margin: auto;
   display: block;
-  padding: 15px 40px;
+  padding: 13px 45px;
   letter-spacing: 0.15rem;
   font-size: 1.05rem;
   font-weight: 600;
@@ -219,7 +236,7 @@ header button {
 .on-the-blog {
   position: relative;
   height: 450px;
-  background: url("../images/on-the-blog.jpg");
+  background: url("http://res.cloudinary.com/ashinzekene/image/upload/v1511573956/frontstack/on-the-blog.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -232,22 +249,32 @@ header button {
   top: 0;
   padding-left: 150px;
   height: 100%;
-  width: 45%;
+  width: 47%;
+  overflow: visible;
   background: linear-gradient(#E36E55, #D78F52);
+  clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
+  /* clip-path: circle(30px at 35px 35px); */
 }
 .on-the-blog .absolute h5 {
   color: #FEBE61;
 }
 .on-the-blog .absolute h1 {
-  font-size: 4rem;
+  padding: 10px 0px;
+  width: 100%;
+  font-size: 4.4rem;
+  font-weight: 600;
   line-height: 60px;
   color: #FAFAFA;
 }
 
 footer {
-  padding: 20px 40px;
+  padding: 40px 40px;
   display: flex;
   justify-content: space-between;
+}
+footer p {
+  color: #A9A9A9;
+  font-weight: 600;
 }
 
 @media screen and (max-width: 768px) {
@@ -256,7 +283,6 @@ footer {
     font-size: 2.5rem;
   }
   .hero .search {
-    bottom: -40px;
     left: 20%;
     width: 60%;
   }
@@ -278,10 +304,12 @@ footer {
     display: block;
   }
   header.general ul {
+    padding-left: 0px;  
     margin-top: 50px;
   }
   header.general ul li {
     display: block;
+    text-align: center;
     padding: 20px 10px;
     cursor: pointer;
   }
@@ -340,11 +368,26 @@ footer {
     width: 90%;
     margin: 30px 10px;
   }
+  .on-the-blog .absolute {
+    width: 100%;
+    padding: 0px;
+    clip-path: unset;
+  }
+  .on-the-blog .absolute * {
+    padding-left: 50px;
+    width: 80%;
+    /* margin: auto; */
+  }
+  .on-the-blog .absolute h1 {
+    padding-left: 50px;
+  }
+    
+  
 }
 
 @media screen and (max-width: 425px) {
   .hero {
-    height: Calc(100vh + 40px);
+    height: Calc(100vh + 100px);
   }
   .hero .search {
     width: 100%;
@@ -356,4 +399,8 @@ footer {
   .locations .location {
     margin: 10px 40px;
   }
+  .on-the-blog .absolute h1 {
+    font-size: 3rem;
+  }
+    
 }
