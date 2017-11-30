@@ -60,6 +60,16 @@ header {
   top: 26px;
 }
 
+header h5 {
+  padding: 10px;
+  font-weight: 900;
+}
+header > div {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+} 
+
 header nav {
   align-self: flex-start;
 }
@@ -248,6 +258,15 @@ header button {
 }
 .on-the-blog .absolute {
   position: absolute;
+  top: 0;
+  height: 100%;
+  width: 47%;
+  background: linear-gradient(#E36E55, #D78F52);
+  clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
+  /* clip-path: circle(30px at 35px 35px); */
+}
+.on-the-blog .text {
+  position: absolute;
   display: flex;
   align-items: center;
   align-content: center;
@@ -256,20 +275,17 @@ header button {
   padding-left: 150px;
   height: 100%;
   width: 47%;
-  overflow: visible;
-  background: linear-gradient(#E36E55, #D78F52);
-  clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
-  /* clip-path: circle(30px at 35px 35px); */
+  z-index: 1o00;
 }
-.on-the-blog .absolute h5 {
+.on-the-blog .text h5 {
   color: #FEBE61;
 }
-.on-the-blog .absolute h1 {
+.on-the-blog .text h1 {
   padding: 10px 0px;
   width: 100%;
-  font-size: 4.4rem;
+  font-size: 4.5rem;
   font-weight: 600;
-  line-height: 60px;
+  line-height: 70px;
   color: #FAFAFA;
 }
 
@@ -351,10 +367,9 @@ footer p {
     transform: rotateZ(-45deg)  translateX(6px);
   }
     
-  .mobile-header h5 {
+  .mobile-header > div {
     margin: auto;
-    width: fit-content;
-    display: block;
+    width: max-content;
   }
   .mobile-cancel {
     display: block;
@@ -380,16 +395,10 @@ footer p {
     padding: 0px;
     clip-path: unset;
   }
-  .on-the-blog .absolute * {
-    padding-left: 50px;
-    width: 80%;
-    /* margin: auto; */
-  }
-  .on-the-blog .absolute h1 {
+  .on-the-blog .text {
+    width: 100%;
     padding-left: 50px;
   }
-    
-  
 }
 
 @media screen and (max-width: 425px) {
@@ -406,7 +415,7 @@ footer p {
   .locations .location {
     margin: 10px 40px;
   }
-  .on-the-blog .absolute h1 {
+  .on-the-blog .text h1 {
     font-size: 3rem;
   }
   footer {
