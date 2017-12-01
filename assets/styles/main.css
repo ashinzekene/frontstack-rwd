@@ -26,9 +26,10 @@
   box-sizing: border-box;
   font-family: "Catamaran";
 }
-/* :focus {
+:focus {
   outline: 0px;
-} */
+  box-shadow: 0px 5px 20px 2px rgba(0,0,0,0.2);
+}
 button {
   cursor: pointer;
 }
@@ -106,6 +107,10 @@ header button {
   background: rgba(255, 255, 255, 0.2);
 }
 
+header button:hover {
+  border: 1px solid #EAEAEA;
+}  
+
 .hero {
   height: 540px;
   padding-top: 150px;
@@ -136,7 +141,8 @@ header button {
 .hero .search label {
   font-size: 1.2rem;
   padding-left : 15px; 
-  padding-right : 15px; 
+  padding-right : 15px;
+  white-space: nowrap;
 }
 .hero .search #search-box {
   height: 80px;
@@ -249,6 +255,11 @@ header button {
   border-radius: 30px; 
 }
 
+.popular-locations .clear-button:hover {
+  color: white;
+  background-color:#E86F58;
+}  
+
 .on-the-blog {
   position: relative;
   height: 450px;
@@ -263,7 +274,6 @@ header button {
   width: 47%;
   background: linear-gradient(#E36E55, #D78F52);
   clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
-  /* clip-path: circle(30px at 35px 35px); */
 }
 .on-the-blog .text {
   position: absolute;
@@ -296,7 +306,7 @@ footer {
   justify-content: space-between;
 }
 footer p {
-  color: #A9A9A9;
+  color: #A1A1A1;
   font-weight: 600;
 }
 
@@ -347,6 +357,10 @@ footer p {
     top: 6px;
     width: 35px;
     left: 20px;
+    height: 50px;
+  }
+  .mobile-header .hamburger:focus {
+    box-shadow: unset;
   }
   .mobile-header .hamburger span {
     display: block;
